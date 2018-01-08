@@ -29,8 +29,8 @@ public class PopulateTest {
         map.put("car[0].color", "Red");//Resulting method call: person.getCar(0).setColor("Red")
         map.put("car[1].name", "Z1");//Resulting method call: person.getCar(1).setName("Z1")
         map.put("car[1].color", "Yellow");//Resulting method call: person.getCar(1).setColor("Yellow")
-        map.put("phone[0]", "00001");//Resulting method call: person.setPhone("00001")
-        map.put("phone[1]", "00002");//Resulting method call: person.setPhone("00002")
+        map.put("phone[0]", "00001");//Resulting method call: person.setPhone(0, "00001")
+        map.put("phone[1]", "00002");//Resulting method call: person.setPhone(1, "00002")
 
         Person p = new Person();
         BeanUtils.populate(p, map);
